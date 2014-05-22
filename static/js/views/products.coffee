@@ -1,21 +1,20 @@
 define [
     'backbone'
-    'cs!collections/categories'
-    'cs!views/cat'
-], (Backbone, Categories, CatView) ->
+    'cs!collections/products'
+    'cs!views/products_item'
+], (Backbone, Categories, ItemView) ->
     Backbone.View.extend
-        tagName: 'ul'
-        className: "list-group mcr_cats"
         initialize: (options) ->
             @.collection = new Categories
-            @.filter =
-                _parentId: options._parentId || null
+            @.filter = {}
+            if options && options._categoryId
+                @.filter._categoryId = options._categoryId || null
         render: ->
             i = @
             i.collection.fetch
                 data: i.filter
                 success: (collection) ->
                     collection.each (model) ->
-                        item = new CatView model: model
+                        item = new ItemView model: model
                         i.$el.append item.render().el
             i

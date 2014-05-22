@@ -9,8 +9,7 @@
 * Require
 * MongoDB
 * Jade
-* Less
-* г.м.
+* Less г.м.
 
 # Төслийг ажиллуулах
 
