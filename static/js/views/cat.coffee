@@ -4,6 +4,7 @@ define [
 ], (Backbone, template) ->
     Backbone.View.extend
         tagName: 'li'
+        className: "list-group-item"
         template: _.template template()
         events:
             'click .expand': 'click'

@@ -5,6 +5,7 @@ define [
 ], (Backbone, Categories, CatView) ->
     Backbone.View.extend
         tagName: 'ul'
+        className: "list-group"
         initialize: (options) ->
             @.collection = new Categories
             @.filter =

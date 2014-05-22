@@ -1,0 +1,74 @@
+.navbar.navbar-default
+    .navbar-header
+        a.navbar-brand(href="#")
+            img(src="/images/logo.png", width=20, style="vertical-align:bottom")
+            strong  Micro
+        .navbar-text Online electronic shop
+    .collapse.navbar-collapse
+        ul.nav.navbar-nav
+            li.active: a(href='#')
+                span.glyphicon.glyphicon-th
+                |  Categories
+            li: a(href='#/b') 
+                span.glyphicon.glyphicon-tag
+                |  Products
+        ul.nav.navbar-nav.navbar-right
+            li.dropdown
+                a.dropdown-toggle(href="#", data-toggle="dropdown")
+                    span.glyphicon.glyphicon-shopping-cart
+                    |  Сагс
+                    b.caret
+                .dropdown-menu(style="padding: 15px 15px 0 15px;width:300px")
+                    ul.nav.nav-pills.nav-stacked
+                        li: a.small(href="#")
+                            | 8x8 LED 
+                            button.close(type="button", aria-hidden="true", style="line-height:.6;padding-left:5px;color:white;opacity:.8") &times;
+                            span.pull-right.text-danger 84'000₮
+                        li: a.small(href="#")
+                            | Arduino Nano 
+                            span.badge &times;2
+                            button.close(type="button", aria-hidden="true", style="line-height:.6;padding-left:5px;color:white;opacity:.8") &times;
+                            span.pull-right.text-danger 84'000₮
+                        li.divider
+                        li: a.lead(href="#")
+                            | Нийт 
+                            span.pull-right.text-danger 84'000₮
+
+            li.dropdown
+                a.dropdown-toggle(href="#", data-toggle="dropdown")
+                    span.glyphicon.glyphicon-log-in
+                    |  Нэвтрэх
+                    b.caret
+                ul.dropdown-menu(style="padding: 15px 15px 0 15px;width:300px")
+                    form
+                        .form-group
+                            .input-group
+                                span.input-group-addon Нэвтрэх нэр
+                                input#username.form-control(type="text")
+                        .form-group
+                            .input-group
+                                input#password.form-control(type="password", placeholder="Нууц үг")
+                                span.input-group-btn
+                                    button.btn.btn-success(type="button") Нэвтрэх
+            li.dropdown
+                a.dropdown-toggle(href="#", data-toggle="dropdown")
+                    span.glyphicon.glyphicon-certificate
+                    |  Бүртгүүлэх
+                    b.caret
+                ul.dropdown-menu(style="padding: 15px 15px 0 15px;width:300px")
+                    form
+                        .form-group
+                            .input-group
+                                span.input-group-addon Нэвтрэх нэр
+                                input#username.form-control(type="text")
+                        .form-group
+                            .input-group
+                                span.input-group-addon @
+                                input#email.form-control(type="email", placeholder="Имэйл")
+                        .form-group
+                            input#password.form-control(type="password", placeholder="Нууц үг")
+                        .form-group
+                            .input-group
+                                input#password-conf.form-control(type="password", placeholder="Нууц үг давтах")
+                                span.input-group-btn
+                                    button.btn.btn-success(type="button") Бүртгүүлэх
