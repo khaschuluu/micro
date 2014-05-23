@@ -1,11 +1,25 @@
-p.
-    <%= name %>
-p.
-    <%= price %> ₮
-p.
-    <%= _categoryId %>
-p.
-    <%= description %>
-p.
-    <%= count %>
-hr
+.media
+    a.pull-left(href="#")
+        img.media-object(src="/images/thumb.svg")
+        br
+        button.btn.btn-success.form-control(type="button")
+            span.glyphicon.glyphicon-shopping-cart
+            |  Сагсанд нэмэх
+    .media-body
+        h4.media-heading
+            <%= name %>
+        dl.dl-horizontal
+            dt.text-muted Үнэ
+            dd
+                strong.text-success <%= price %>
+                |  ₮
+            dt.text-muted Төрөл 
+            dd.
+                <% _.each(category_path.reverse(), function(item) { %>
+                    <%= item %> > 
+                <% }) %>
+            dt.text-muted Тоо ширхэг
+            dd <%= count %>
+        p <%= description %>
+    br
+    hr
